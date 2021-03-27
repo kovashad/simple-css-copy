@@ -1,3 +1,7 @@
+:root {
+    --fontcolor: rgb(37, 37, 37);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +10,7 @@
 
 body {
     background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 div {
@@ -19,8 +24,14 @@ ul {
 }
 
 ul li {
+    font-size: 13px;
     list-style: none;
     padding: 1%;
+}
+
+.dots {
+    width: 15px;
+    height: 15px;
 }
 
 .logo {
@@ -32,27 +43,41 @@ ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
 }
 
 button {
-    margin: auto 20px;
-    padding: 10px;
+    margin: auto 15px;
+    padding: 8px 15px;
     border-style: none;
     background-color: inherit;
 }
 
 button:hover {
     box-shadow: 0px 1px 5px 1px grey;
-    border-radius: 5px;
+    border-radius: 3px;
+}
+
+button:focus, button:active {
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid rgb(79, 141, 255);
 }
 
 .signin {
     background-color: #1a73e8;
     color:aliceblue;
-    padding: 1%;
+    padding: 9px;
     min-width: 100px;
     min-height: 40px;
     border: none;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.signin:hover {
+    background-color: #428ff3;
+    box-shadow: none;
     border-radius: 5px;
 }
 
@@ -83,8 +108,23 @@ textarea:focus, input:focus {
 .lang {
     display: flex;
     justify-content: center;
+    font-size: 13px;
 }
 
-p > a {
+p a {
     text-decoration: none;
+
+}
+
+li a {
+    text-decoration: none;
+    color: var(--fontcolor);
+}
+
+.buttons button {
+    color: var(--fontcolor);
+}
+
+div p {
+    color: var(--fontcolor);
 }
